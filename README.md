@@ -1,0 +1,8 @@
+## Features
+# Feature 1: 
+As a user, I should be able to filter events by city, so that I can see a list of events taking place in that city.
+<h1>Scenario 1: When user hasn’t searched for a specific city, show upcoming events from all cities.</h1>
+	Given - user hasn’t searched for any city; 
+  When - the user opens the app;
+  Then - the user should see a list of upcoming events.
+  
