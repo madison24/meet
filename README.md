@@ -77,7 +77,11 @@ As the user, I should be able to view a chart of the number of upcoming events h
 - Scenario 1: Show a chart with the number of upcoming events in each city.
     - Given - user is on main events page
     - When - user selects overview of upcoming events in city
-    - Then - user sees chart showing upcoming events 
+    - Then - user sees chart showing upcoming events
+ 
+## Use of Serverless Functions (FaaS)
+- The Meet App uses serverless functions for authorization and access to the Google Calendar API, which allows users to view public events. The serverless functions generate and provide access tokens which ensure secure access to the API.
+- The backend is hosted on AWS (requests come from frontend to Lambda function to data).
 
 
 
