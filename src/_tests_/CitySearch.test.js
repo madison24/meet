@@ -6,8 +6,9 @@ import CitySearch from "../components/CitySearch";
 describe("<CitySearch /> component", () => {
   let CitySearchComponent;
   beforeEach(() => {
-    CitySearchComponent = render(<CitySearch />);
+    CitySearchComponent = render(<CitySearch allLocations={[]} />);
   });
+
   test("renders text input", () => {
     const cityTextBox = CitySearchComponent.queryByRole("textbox");
     expect(cityTextBox).toBeInTheDocument();
@@ -59,7 +60,9 @@ describe("<CitySearch /> component", () => {
     const user = userEvent.setup();
     const allEvents = await getEvents();
     const allLocations = extractLocations(allEvents);
-    CitySearchComponent.rerender(<CitySearch allLocations={allLocations} />);
+    CitySearchComponent.rerender(
+      <CitySearch allLocations={allLocations} setCurrentCity={() => {}} />
+    );
 
     const cityTextBox = CitySearchComponent.queryByRole("textbox");
     await user.type(cityTextBox, "Berlin");
@@ -67,7 +70,6 @@ describe("<CitySearch /> component", () => {
     // the suggestion's textContent look like this: "Berlin, Germany"
     const BerlinGermanySuggestion =
       CitySearchComponent.queryAllByRole("listitem")[0];
-
     await user.click(BerlinGermanySuggestion);
 
     expect(cityTextBox).toHaveValue(BerlinGermanySuggestion.textContent);
