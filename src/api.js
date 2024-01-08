@@ -1,5 +1,9 @@
 import mockData from "./mock-data";
-/*
+
+/**
+ *
+ * @param {*} events:
+ * The following function should be in the “api.js” file.
  * This function takes an events array, then uses map to create a new array with only locations.
  * It will also remove all duplicates by creating another new array using the spread operator and spreading a Set.
  * The Set will remove all duplicates from the array.
@@ -10,6 +14,7 @@ export const extractLocations = (events) => {
   return locations;
 };
 
+// checkToken function
 const checkToken = async (accessToken) => {
   const response = await fetch(
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
@@ -18,6 +23,7 @@ const checkToken = async (accessToken) => {
   return result;
 };
 
+// removeQuery function
 const removeQuery = () => {
   let newurl;
   if (window.history.pushState && window.location.pathname) {
@@ -33,6 +39,7 @@ const removeQuery = () => {
   }
 };
 
+// getToken  function
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const response = await fetch(
@@ -46,8 +53,7 @@ const getToken = async (code) => {
   return access_token;
 };
 
-/* This function will fetch the list of all events */
-
+// This function will fetch the list of all events
 export const getEvents = async () => {
   if (window.location.href.startsWith("http://localhost")) {
     return mockData;
@@ -57,7 +63,10 @@ export const getEvents = async () => {
 
   if (token) {
     removeQuery();
-    const url = "YOUR_GET_EVENTS_API_ENDPOINT" + "/" + token;
+    const url =
+      "https://me8o9q4vub.execute-api.ca-central-1.amazonaws.com/dev/api/get-events" +
+      "/" +
+      token;
     const response = await fetch(url);
     const result = await response.json();
     if (result) {
@@ -66,8 +75,7 @@ export const getEvents = async () => {
   }
 };
 
-/* this will get the access token */
-
+// Getting the Access Token
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem("access_token");
 
@@ -82,8 +90,8 @@ export const getAccessToken = async () => {
         "https://me8o9q4vub.execute-api.ca-central-1.amazonaws.com/dev/api/get-auth-url"
       );
       const result = await response.json();
-      const { authUrl } = result;
-      return (window.location.href = authUrl);
+      const { authURL } = result;
+      return (window.location.href = authURL);
     }
     return code && getToken(code);
   }

@@ -9,13 +9,14 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     setSuggestions(allLocations);
   }, [`${allLocations}`]);
 
-  const handleInputChange = (event) => {
+  const handleInputChanged = (event) => {
     const value = event.target.value;
     const filteredLocations = allLocations
       ? allLocations.filter((location) => {
           return location.toUpperCase().indexOf(value.toUpperCase()) > -1;
         })
       : [];
+
     setQuery(value);
     setSuggestions(filteredLocations);
   };
@@ -32,17 +33,17 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
       <input
         type="text"
         className="city"
-        placeholder="Search for city"
+        placeholder="Search for a city"
         value={query}
         onFocus={() => setShowSuggestions(true)}
-        onChange={handleInputChange}
+        onChange={handleInputChanged}
       />
       {showSuggestions ? (
         <ul className="suggestions">
-          {suggestions.map((suggestions) => {
+          {suggestions.map((suggestion) => {
             return (
-              <li onClick={handleItemClicked} key={suggestions}>
-                {suggestions}
+              <li onClick={handleItemClicked} key={suggestion}>
+                {suggestion}
               </li>
             );
           })}
@@ -54,4 +55,5 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     </div>
   );
 };
+
 export default CitySearch;
