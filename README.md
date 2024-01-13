@@ -41,7 +41,7 @@ As a user, I should be able to show/hide an events details, so that I can learn 
  - Scenario 3: User can collapse an event to hide details
     - Given - user can see details of an event
     - When - user clicks "hide details" on the event
-    - Then - user can longer see the event details
+    - Then - user can no longer see the event details
 
 ## Feature 3: Specify Number of Events
 As a user, I should be able to specify the number of events displayed, so that I can view more or less events available.
