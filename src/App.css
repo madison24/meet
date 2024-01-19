@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .App {
-  text-align: center;
+  /* text-align: center; */
   padding: 2% 5%;
 }
 
@@ -28,17 +28,28 @@ input[type="number"] {
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
+  color: #fb2576;
+}
+
+input::placeholder {
+  color: #fb2576;
+}
+.title {
+  text-align: center;
+  color: #fb2576;
 }
 
 .city {
-  width: 250px;
+  width: 254px;
+  color: #fb2576;
 }
 
 #city-search {
-  display: flex;
+  color: #fb2576;
+  /* display: flex;
   flex-direction: column;
   margin: auto;
-  position: relative;
+  position: relative; */
 }
 
 .suggestions {
@@ -75,9 +86,15 @@ input[type="number"] {
   border: 1px solid #c3c2c2;
   border-radius: 4px;
   position: relative;
+  color: #fb2576;
+}
+
+.details {
+  color: #09063c;
 }
 
 .details-btn {
+  /* color: #fb2576; */
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -85,4 +102,12 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+}
+
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
 }
