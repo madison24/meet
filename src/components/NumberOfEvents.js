@@ -2,14 +2,14 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const handleInputChange = (event) => {
     const value = event.target.value;
     let errorMessage;
-    if (value <= 0) {
-      errorMessage = "The number must be higher than 0.";
+    if (isNaN(value) || value <= 0) {
+      errorMessage = "The number must be higher than 0";
+      setErrorAlert(errorMessage);
     } else {
       errorMessage = "";
+      setErrorAlert(errorMessage);
+      setCurrentNOE(value);
     }
-
-    setCurrentNOE(value);
-    setErrorAlert(errorMessage);
   };
 
   return (
