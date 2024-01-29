@@ -41,6 +41,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Meet</h1>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
@@ -55,7 +56,10 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
       />
-      <CityEventsChart allLocations={allLocations} events={events} />
+      <div>
+        <CityEventsChart allLocations={allLocations} events={events} />
+      </div>
+
       <EventList events={events} />
     </div>
   );
