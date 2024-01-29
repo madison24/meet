@@ -83,25 +83,29 @@ input::placeholder {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
-  border: 1px solid #c3c2c2;
+  /* border: 1px solid #3b1d4a; */
   border-radius: 4px;
   position: relative;
   color: #fd0363;
+  border-bottom: #3b1d4a 1px solid;
 }
 
 .details {
-  color: #09063c;
+  color: #3b1d4a;
 }
 
 .details-btn {
-  /* color: #fb2576; */
-  position: absolute;
+  background-color: #3b1d4a;
+  color: white;
+  /* position: absolute; */
+  margin-top: 10px;
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  border-color: none;
 }
 
 .alerts-container {
