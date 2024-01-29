@@ -22,13 +22,17 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid #3b1d4a;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
   color: #fd0363;
+}
+
+#number-of-events {
+  color: #3b1d4a;
 }
 
 input::placeholder {
