@@ -1,10 +1,11 @@
 import CitySearch from "./components/CitySearch";
-import NumberOfEvents from "./components/NumberOfEvents";
-import { useState, useEffect } from "react";
-import { extractLocations, getEvents } from "./api";
-import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
-import CityEventsChart from "./components/CityEventsChart";
 import EventList from "./components/EventList";
+import NumberOfEvents from "./components/NumberOfEvents";
+import CityEventsChart from "./components/CityEventsChart";
+// import EventGenresChart from "./components/EventGenresChart";
+import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
+import { useEffect, useState } from "react";
+import { extractLocations, getEvents } from "./api";
 
 import "./App.css";
 
@@ -54,10 +55,7 @@ const App = () => {
         setCurrentNOE={setCurrentNOE}
         setErrorAlert={setErrorAlert}
       />
-      <div className="charts-container">
-        {/* <EventGenresChart events={events} /> */}
-        <CityEventsChart allLocations={allLocations} events={events} />
-      </div>
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
     </div>
   );
