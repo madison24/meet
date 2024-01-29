@@ -55,7 +55,7 @@ const CityEventsChart = ({ allLocations, events }) => {
           tickFormatter={(value) => parseInt(value, 10)}
         />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Scatter name="A school" data={data} fill="#8884d8" />
+        <Scatter name="A school" data={data} fill="#fd0363" />
       </ScatterChart>
     </ResponsiveContainer>
   );

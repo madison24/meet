@@ -28,24 +28,24 @@ input[type="number"] {
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
-  color: #fb2576;
+  color: #fd0363;
 }
 
 input::placeholder {
-  color: #fb2576;
+  color: #fd0363;
 }
 .title {
   text-align: center;
-  color: #fb2576;
+  color: #fd0363;
 }
 
 .city {
   width: 254px;
-  color: #fb2576;
+  color: #fd0363;
 }
 
 #city-search {
-  color: #fb2576;
+  color: #fd0363;
   /* display: flex;
   flex-direction: column;
   margin: auto;
@@ -86,7 +86,7 @@ input::placeholder {
   border: 1px solid #c3c2c2;
   border-radius: 4px;
   position: relative;
-  color: #fb2576;
+  color: #fd0363;
 }
 
 .details {
@@ -110,4 +110,16 @@ input::placeholder {
   left: 20px;
   width: 250px;
   z-index: 1000;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
 }
