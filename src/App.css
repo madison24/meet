@@ -17,18 +17,22 @@ p {
   margin: 5px 0;
 }
 
+.meet-title {
+  color: #fd0363;
+  font-size: 32px;
+}
 input[type="text"],
 input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #3b1d4a;
+  border: 1.5px solid #3b1d4a;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
-  color: #fd0363;
+  color: #3b1d4a;
 }
 
 #number-of-events {
@@ -36,20 +40,16 @@ input[type="number"] {
 }
 
 input::placeholder {
-  color: #fd0363;
-}
-.title {
-  text-align: center;
-  color: #fd0363;
+  color: #3b1d4a;
 }
 
 .city {
   width: 254px;
-  color: #fd0363;
+  color: #3b1d4a;
 }
 
 #city-search {
-  color: #fd0363;
+  color: #3b1d4a;
   /* display: flex;
   flex-direction: column;
   margin: auto;

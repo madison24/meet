@@ -64,7 +64,7 @@ const EventGenresChart = ({ events }) => {
             <Cell key={`cell-${index}`} fill={Colors[index]} />
           ))}
         </Pie>
-        <Legend verticalAlign="top" height={36} />
+        <Legend height={36} />
       </PieChart>
     </ResponsiveContainer>
   );
