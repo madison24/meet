@@ -21,21 +21,18 @@ p {
   color: #fd0363;
   font-size: 32px;
 }
+
 input[type="text"],
 input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1.5px solid #3b1d4a;
+  border: 1.2px solid #6b1650;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
   height: 38px;
   margin-bottom: 20px;
-  color: #3b1d4a;
-}
-
-#number-of-events {
   color: #3b1d4a;
 }
 
@@ -83,6 +80,10 @@ input::placeholder {
   background-color: #bcdcdb;
 }
 
+#number-of-events {
+  color: #3b1d4a;
+  font-weight: 400;
+}
 .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
@@ -91,7 +92,7 @@ input::placeholder {
   border-radius: 4px;
   position: relative;
   color: #fd0363;
-  border-bottom: #3b1d4a 1px solid;
+  border-bottom: #6b1650 1px solid;
 }
 
 .details {
@@ -123,6 +124,8 @@ input::placeholder {
 .charts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* media queries */
